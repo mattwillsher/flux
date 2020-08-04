@@ -42,6 +42,8 @@ var allowedEnvVars = []string{
 	// when container is running in hardened Openshift environments and user id is not found in /etc/passwd
 	// for usage flux must be wrapped using https://cwrap.org/nss_wrapper.html library
 	"NSS_WRAPPER_PASSWD", "NSS_WRAPPER_GROUP", "LD_PRELOAD",
+	// variables used by the AWS CodeCommit helper to get temporary git credentials
+	"AWS_WEB_IDENTITY_TOKEN_FILE", "AWS_ROLE_ARN",
 }
 
 type gitCmdConfig struct {
